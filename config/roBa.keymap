@@ -101,7 +101,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                  &kp T                                                       &kp Y        &kp U  &lt 5 I    &kp O    &lt 5 P
-&mt LCTRL A       &kp S         &kp D         &kp F                  &kp G        &kp LS(LG(S))        &lt 6 MINUS               &kp H        &kp J  &kp K      &kp L    &lt 4 RETURN
+&mt LCTRL A       &kp S         &kp D         &kp F                  &kp G        &kp LS(LG(S))        &lt 6 UNDER               &kp H        &kp J  &kp K      &kp L    &lt 4 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &kp COLON            &lt 6 MINUS               &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INTERNATIONAL_5  &lt 2 SPACE  &mt LCTRL ENTER      &mt LEFT_SHIFT BACKSPACE  &lt 1 SPACE                             &kp DEL
             >;
@@ -121,10 +121,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE            &kp HOME        &kp UP_ARROW    &kp END          &kp PLUS                               &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LC(A)             &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp GRAVE  &trans      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)       &kp LC(C)       &kp LC(V)        &kp LC(B)  &trans      &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                &trans          &trans          &trans           &trans     &trans      &trans          &trans                                                                     &kp PIPE
+&kp ESCAPE            &kp HOME        &kp UP_ARROW    &kp END          &kp DELETE                                 &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp LC(A)             &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)       &kp LC(C)       &kp LC(V)        &kp LC(B)      &trans      &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
+&trans                &trans          &trans          &trans           &trans         &trans      &trans          &trans                                                                     &kp PIPE
             >;
         };
 
