@@ -110,14 +110,13 @@
             compatible = "zmk,behavior-hold-tap";
             label = "P_ALT_TAB";
         
-            #binding-cells = <0>;
+            #binding-cells = <2>;
         
             flavor = "balanced";
             tapping-term-ms = <200>;
         
-            bindings = <&alt_tab_press>, <&kp P>;
+            bindings = <&lm>, <&kp>;
         };
-
 
     };
 
@@ -126,7 +125,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                  &kp T                                                       &kp Y        &kp U  &lt 5 I    &kp O    &p_alt_tab
+&kp Q             &kp W         &kp E         &kp R                  &kp T                                                       &kp Y        &kp U  &lt 5 I    &kp O    &lt ALT_TAB P
 &mt LCTRL A       &kp S         &kp D         &kp F                  &kp G        &kp LS(LG(S))        &lt 6 UNDER               &kp H        &kp J  &kp K      &kp L    &lt 4 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &kp COLON            &lt 6 MINUS               &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INTERNATIONAL_5  &lt 2 SPACE  &mt LCTRL ENTER      &mt LEFT_SHIFT BACKSPACE  &lt 1 SPACE                             &kp DEL
@@ -196,7 +195,7 @@
 
         ALT_TAB {
             bindings = <
-        &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &kp LEFT_ALT
         &trans &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans      &trans  &trans                         &trans
