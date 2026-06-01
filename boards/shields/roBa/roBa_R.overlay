@@ -1,4 +1,5 @@
 #include "roBa.dtsi"
+#include <dt-bindings/zmk/keys.h>
 
 &default_transform {
     col-offset = <6>;
@@ -19,6 +20,28 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+    };
+
+
+    alt_tab_listener {
+        status = "okay";
+        compatible = "zmk,input-listener";
+
+        device = <&trackball>;
+
+        layers = <7>;
+
+        input-processors = <&alt_tab_processor>;
+    };
+
+
+    input_processors {
+        alt_tab_processor: alt_tab_processor {
+            compatible = "zmk,input-processor-behavior";
+            #input-processor-cells = <0>;
+
+            bindings = <&kp TAB>;
+        };
     };
 };
 
