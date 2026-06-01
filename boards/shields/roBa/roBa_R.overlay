@@ -16,6 +16,7 @@
 };
 
 / {
+
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
@@ -35,14 +36,13 @@
     };
 
 
-    input_processors {
-        alt_tab_processor: alt_tab_processor {
-            compatible = "zmk,input-processor-behavior";
-            #input-processor-cells = <0>;
+    alt_tab_processor: alt_tab_processor {
+        compatible = "zmk,input-processor-behavior";
+        #input-processor-cells = <0>;
 
-            bindings = <&kp TAB>;
-        };
+        bindings = <&kp TAB>;
     };
+
 };
 
 &pinctrl {
