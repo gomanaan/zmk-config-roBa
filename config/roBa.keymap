@@ -94,6 +94,21 @@
 
             tap-ms = <20>;
         };
+
+        // PキーをAlt+Tabに割り当てる
+        p_alt_tab: p_alt_tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "P_ALT_TAB";
+            #binding-cells = <0>;
+        
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+        
+            bindings = <&lm>, <&kp>;
+            hold-trigger-key-positions = <>;
+        };
+
+
     };
 
     keymap {
