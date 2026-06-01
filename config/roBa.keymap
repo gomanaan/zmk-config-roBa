@@ -97,6 +97,16 @@
             tap-ms = <20>;
         };
 
+        // Alt+Tabのスクロール動作の追加
+        alt_tab_scroll: behavior_sensor_rotate_alt_tab {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+        
+            bindings = <&kp TAB>, <&kp TAB>;
+        
+            tap-ms = <20>;
+        };
+
     };
 
     keymap {
@@ -171,6 +181,7 @@
             >;
         };
 
+
         ALT_TAB {
             bindings = <
         &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans
@@ -179,8 +190,10 @@
         &trans &trans &trans &trans &trans &trans      &trans  &trans                         &trans
             >;
         
-            sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB))>;
+            sensor-bindings = <&alt_tab_scroll>;
         };
+
+
 
 
     };
