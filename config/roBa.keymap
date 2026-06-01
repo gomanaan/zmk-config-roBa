@@ -72,14 +72,6 @@
             label = "TO_LAYER_0";
         };
 
-        alt_tab_press: alt_tab_press {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-    
-            bindings =
-                <&macro_press &kp LEFT_ALT>,
-                <&mo ALT_TAB>;
-        };
 
     };
 
@@ -105,19 +97,6 @@
             tap-ms = <20>;
         };
 
-        // PキーをAlt+Tabに割り当てる
-        p_alt_tab: p_alt_tab {
-            compatible = "zmk,behavior-hold-tap";
-            label = "P_ALT_TAB";
-        
-            #binding-cells = <2>;
-        
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-        
-            bindings = <&lm>, <&kp>;
-        };
-
     };
 
     keymap {
@@ -131,7 +110,6 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 INTERNATIONAL_5  &lt 2 SPACE  &mt LCTRL ENTER      &mt LEFT_SHIFT BACKSPACE  &lt 1 SPACE                             &kp DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
             sensor-bindings = <&scroll_up_down>;
         };
 
@@ -195,13 +173,13 @@
 
         ALT_TAB {
             bindings = <
-        &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &kp LEFT_ALT
+        &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans      &trans  &trans                         &trans
             >;
         
-            sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
+            sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB))>;
         };
 
 
